@@ -1,7 +1,12 @@
 <template>
-  <Tutorial/>
+  <main>
+    <h1>To do project</h1>
+    <NuxtLink to="/addToDo">Add a todo</NuxtLink>
+  </main>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'Home'
+}
 </script>
