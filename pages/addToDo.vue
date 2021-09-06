@@ -5,7 +5,8 @@
       <FormInput 
         label="Description of task"
         name="item"
-        placeholder="please enter a description">
+        placeholder="please enter a description"
+        @update-input="updateInput">
       </FormInput>
       <FormDropdown 
         label="Please select a group" 
@@ -53,6 +54,24 @@
 
 <script>
 export default {
-  name: 'add-to-do'
+  name: 'add-to-do',
+  data(){
+    return {      
+      description: '',
+      group: '',
+      category: '',
+      time: '',
+      status: ''
+    }
+  },
+  methods: {
+    updateInput(e){
+      console.log('input is changing')
+      console.log(e)
+      // this.description = e.target
+    },
+  }
+
+
 }
 </script>
