@@ -2,8 +2,11 @@
   <section>
     <h1>Add todo item</h1>
     <form>
-      <label for="item">Description</label>
-      <input type="text" name="item" id="item" placeholder="To do item"> 
+      <FormInput 
+        label="Description of task"
+        name="item"
+        placeholder="please enter a description">
+      </FormInput>
       <FormDropdown 
         label="Please select a group" 
         v-bind:items="['personal', 'work']"
@@ -26,16 +29,24 @@
           }]"
         name="category"
       ></FormRadio>
-      <label for="estimated-time">Please enter the estimated time</label>
-      <input type="text" name="estimated-time" id="estimated-time">
-
-      <label for="status">Status</label>
-      <input type="radio" id="complete" name="status" value="complete">
-      <label for="complete">complete</label><br>
-
-      <input type="radio" id="not-complete" name="status" value="not-complete">
-      <label for="not-complete">Not complete</label><br>
-      
+      <FormInput
+      label="Please enter the estimated time"
+      name="estimated-time"
+      placeholder="5 mins">
+      </FormInput>
+      <FormRadio
+        label="Status"
+        v-bind:items="[
+          {
+            text: 'Completed',
+            value: 'complete'
+          },
+          {
+            text: 'Not complete',
+            value: 'not-complete'
+          }]"
+        name="status"
+      ></FormRadio> 
     </form>
   </section>
 </template>

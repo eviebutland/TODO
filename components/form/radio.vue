@@ -21,9 +21,6 @@ export default {
       value: 'quick-task'
     }
   ,]}
-  },
-  mounted() {
-    console.log(' i was rendered')
   }
 }
 </script>
