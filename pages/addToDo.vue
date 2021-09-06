@@ -6,7 +6,7 @@
         label="Description of task"
         name="item"
         placeholder="please enter a description"
-        @update-input="updateInput">
+        @update-input="updateDescription">
       </FormInput>
       <FormDropdown 
         label="Please select a group" 
@@ -33,7 +33,8 @@
       <FormInput
       label="Please enter the estimated time"
       name="estimated-time"
-      placeholder="5 mins">
+      placeholder="5 mins"
+      @update-input="updateTime">
       </FormInput>
       <FormRadio
         label="Status"
@@ -65,11 +66,12 @@ export default {
     }
   },
   methods: {
-    updateInput(e){
-      console.log('input is changing')
-      console.log(e)
-      // this.description = e.target
+    updateDescription(value){
+      this.description = value
     },
+    updateTime(value){
+      this.time = value
+    }
   }
 
 
