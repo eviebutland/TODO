@@ -11,7 +11,8 @@
       <FormDropdown 
         label="Please select a group" 
         v-bind:items="['personal', 'work']"
-        name="group">
+        name="group"
+        @update-dropdown-selection="updateGroup">
         </FormDropdown>
       <FormRadio
         label="Please select a category"
@@ -29,12 +30,13 @@
             value: 'project'
           }]"
         name="category"
+        @update-radio="updateCategory"
       ></FormRadio>
       <FormInput
-      label="Please enter the estimated time"
-      name="estimated-time"
-      placeholder="5 mins"
-      @update-input="updateTime">
+        label="Please enter the estimated time"
+        name="estimated-time"
+        placeholder="5 mins"
+        @update-input="updateTime">
       </FormInput>
       <FormRadio
         label="Status"
@@ -48,7 +50,9 @@
             value: 'not-complete'
           }]"
         name="status"
+        @update-radio="updateStatus"
       ></FormRadio> 
+      <button type="submit">Add new task</button>
     </form>
   </section>
 </template>
@@ -71,6 +75,15 @@ export default {
     },
     updateTime(value){
       this.time = value
+    },
+    updateGroup(value){
+      this.group = value
+    },
+    updateCategory(value){
+      this.category = value
+    },
+    updateStatus(value){
+      this.status = value
     }
   }
 

@@ -1,9 +1,9 @@
 <template>
   <fieldset>
     <label :for="name">{{label}}</label>
-      <div v-for="item in items" :key="item.value">
+      <div v-for="item in items" :key="item.value" >
+        <input type="radio" :name="name" :id="item.text" v-model="selectedItem" :value="item.value" v-on:change="$emit('update-radio', selectedItem)">
         <label :for="name">{{item.text}}</label>
-        <input type="radio" :name="name" :id="item.text">
       </div>
   </fieldset>
 </template>
@@ -17,10 +17,15 @@ export default {
     items: { 
       type: Array, 
       default: () => [{
-      text: 'Quick task',
-      value: 'quick-task'
+        text: 'Quick task',
+        value: 'quick-task'
+      }]
     }
-  ,]}
+  },
+  data(){
+    return {
+      selectedItem: ''
+    }
   }
 }
 </script>
