@@ -12,7 +12,7 @@
         v-bind:items="['personal', 'work']"
         name="group"
         @update-dropdown-selection="$emit('update-group', $event)">
-        </FormDropdown>
+      </FormDropdown>
       <FormRadio
         label="Please select a category"
         v-bind:items="[
