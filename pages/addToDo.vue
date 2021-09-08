@@ -1,59 +1,14 @@
 <template>
   <section>
     <h1>Add todo item</h1>
-    <form>
-      <FormInput 
-        label="Description of task"
-        name="item"
-        placeholder="please enter a description"
-        @update-input="updateDescription">
-      </FormInput>
-      <FormDropdown 
-        label="Please select a group" 
-        v-bind:items="['personal', 'work']"
-        name="group"
-        @update-dropdown-selection="updateGroup">
-        </FormDropdown>
-      <FormRadio
-        label="Please select a category"
-        v-bind:items="[
-          {
-            text: 'Quick task',
-            value: 'quick-task'
-          },
-          {
-            text: 'Task',
-            value: 'task'
-          },
-          {
-            text: 'Project',
-            value: 'project'
-          }]"
-        name="category"
-        @update-radio="updateCategory"
-      ></FormRadio>
-      <FormInput
-        label="Please enter the estimated time"
-        name="estimated-time"
-        placeholder="5 mins"
-        @update-input="updateTime">
-      </FormInput>
-      <FormRadio
-        label="Status"
-        v-bind:items="[
-          {
-            text: 'Completed',
-            value: 'complete'
-          },
-          {
-            text: 'Not complete',
-            value: 'not-complete'
-          }]"
-        name="status"
-        @update-radio="updateStatus"
-      ></FormRadio> 
-      <button type="submit" @click="storeInState">Add new task</button>
-    </form>
+    <Form
+      @update-description="updateDescription"
+      @update-group="updateGroup"
+      @update-category="updateCategory"
+      @update-status="updateStatus"
+      @update-time="updateTime"
+      @update-state="storeInState">
+    </Form>
     <br/>
     <h2>View all todos</h2>
     <button @click="getAllTodos">Return all todos</button>

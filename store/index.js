@@ -24,7 +24,9 @@ export const getters = {
   filterByCompleted(){
     // filter by completed tasks
   },
-  getSingleItem(state, id){
-    return state.todos.filter(todo => todo.id === id)
+  getSingleItem(state){
+    return (id) => {
+      return state.todos.find(todo => todo.id == id)
+    }
   }
 }
