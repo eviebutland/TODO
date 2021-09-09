@@ -4,7 +4,7 @@
       <ul>
         <NuxtLink to="/" class="text-xl text-gray-900 leading-1 hover:text-gray-400 mx-4 md:my-0">Home</NuxtLink>
         <NuxtLink to="/addToDo" class="text-xl text-gray-900 leading-1 hover:text-gray-400 mx-4 md:my-0">Add</NuxtLink>
-        <NuxtLink to="/addToDo" class="text-xl text-gray-900 leading-1 hover:text-gray-400 mx-4 md:my-0">Filter</NuxtLink>
+        <NuxtLink to="/filter" class="text-xl text-gray-900 leading-1 hover:text-gray-400 mx-4 md:my-0">Filter</NuxtLink>
       </ul>
     </nav>
     <Nuxt/>
@@ -12,7 +12,7 @@
       <ul>
         <NuxtLink to="/" class="text-sm leading-1 hover:text-gray-400 mx-4 md:my-0 text-indigo-500">Home</NuxtLink>
         <NuxtLink to="/addToDo" class="text-sm text-indigo-500 leading-1 hover:text-gray-400 mx-4 md:my-0">Add</NuxtLink>
-        <NuxtLink to="/addToDo" class="text-sm text-indigo-500 leading-1 hover:text-gray-400 mx-4 md:my-0">Filter</NuxtLink>
+        <NuxtLink to="/filter" class="text-sm text-indigo-500 leading-1 hover:text-gray-400 mx-4 md:my-0">Filter</NuxtLink>
       </ul>
     </footer>
   </div>

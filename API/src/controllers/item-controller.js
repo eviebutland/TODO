@@ -3,6 +3,7 @@ const Router = express.Router
 const controller = new Router()
 const Item = require('../model/item.js')
 
+// add new to do item
 controller.post('/add', async (req, res) => {
   try {
     console.log(req.body)
@@ -15,8 +16,8 @@ controller.post('/add', async (req, res) => {
 	}
 })
 
+// get all items
 controller.get('/', async (req, res) => {
-
   try {
 		let items = await Item.find();
     if(items.length === 0) {
@@ -35,14 +36,12 @@ controller.get('/', async (req, res) => {
 		})
 	}
 })
-// controller.get('/:id', async (req, res) => {
-// 	getMentorById(req, res)
-// })
-// controller.delete('/:id', async (req, res) => {
-// 	deleteMentorById(req, res)
-// })
-// controller.put('/:id', validatePUT(), async (req, res) => {
-// 	updateMentor(req, res)
-// })
+// get all and filer by category?
+// get all and filer by status
+// get all and filer by type
+
+// update a single item (get and put)
+
+// delete a single item
 
 module.exports = controller
