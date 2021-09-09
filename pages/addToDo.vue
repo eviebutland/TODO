@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Add todo item</h1>
+    <h1 class="text-7xl">Add todo item</h1>
     <Form
       @update-description="updateDescription"
       @update-group="updateGroup"
@@ -11,7 +11,7 @@
     </Form>
     <br/>
     <h2>View all todos</h2>
-    <button @click="getAllTodos">Return all todos</button>
+    <button @click="getAllTodos" class="rounded bg-blue-500 md:bg-green-500">Return all todos</button>
 
     <!-- add styles to me -->
     <ul v-if="todos.length > 0" class="divide-y divide-gray-200 rounded-full">
