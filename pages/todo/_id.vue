@@ -1,79 +1,98 @@
 <template>
-  <main>
-    <EditField 
-      :field="todo.description"
-      :saveUpdatedField="saveUpdatedDescription">
-        <FormInput 
-          label="Description of task"
-          name="item"
-          placeholder="please enter a description"
-          @update-input="updateDescription">
-        </FormInput>
-    </EditField>
+  <main class="rounded overflow-hidden shadow-lg decoration-clone">
+    <section>
+      <EditField 
+        text="Description"
+        :field="todo.description"
+        :saveUpdatedField="saveUpdatedDescription">
+          <FormInput 
+            label="Description of task"
+            name="item"
+            placeholder="please enter a description"
+            @update-input="updateDescription">
+          </FormInput>
+      </EditField>
+    </section>
     <br/>
-    <EditField 
-      :field="todo.group"
-      :saveUpdatedField="saveUpdatedGroup">
-        <FormDropdown 
-          label="Please select a group" 
-          v-bind:items="['personal', 'work']"
-          name="group"
-          @update-dropdown-selection="updateGroup">
-        </FormDropdown>
-    </EditField>
+    <section>
+      <EditField 
+        text="Group"
+        :field="todo.group"
+        :saveUpdatedField="saveUpdatedGroup">
+          <FormDropdown 
+            label="Please select a group" 
+            v-bind:items="['personal', 'work']"
+            name="group"
+            @update-dropdown-selection="updateGroup">
+          </FormDropdown>
+      </EditField>
+    </section>
+
     <br/>
-    <EditField 
-      :field="todo.category"
-      :saveUpdatedField="saveUpdatedCategory">
-        <FormRadio
-          label="Please select a category"
-          v-bind:items="[
-            {
-              text: 'Quick task',
-              value: 'quick-task'
-            },
-            {
-              text: 'Task',
-              value: 'task'
-            },
-            {
-              text: 'Project',
-              value: 'project'
-            }]"
-          name="category"
-          @update-radio="updateCategory"
-        ></FormRadio>
-    </EditField>
+    <section>
+      <EditField 
+        text="Category"
+        :field="todo.category"
+        :saveUpdatedField="saveUpdatedCategory">
+          <FormRadio
+            label="Please select a category"
+            v-bind:items="[
+              {
+                text: 'Quick task',
+                value: 'quick-task'
+              },
+              {
+                text: 'Task',
+                value: 'task'
+              },
+              {
+                text: 'Project',
+                value: 'project'
+              }]"
+            name="category"
+            @update-radio="updateCategory"
+          ></FormRadio>
+      </EditField>
+    </section>
+
     <br/>
-    <EditField 
-      :field="todo.time"
-      :saveUpdatedField="saveUpdatedTime">
-        <FormInput
-          label="Please enter the estimated time"
-          name="estimated-time"
-          placeholder="5 mins"
-          @update-input="updateTime">
-        </FormInput>        
-    </EditField>
+    <section>
+      <EditField
+        text="Estimated Time"
+        :field="todo.time"
+        :saveUpdatedField="saveUpdatedTime">
+          <FormInput
+            label="Please enter the estimated time"
+            name="estimated-time"
+            placeholder="5 mins"
+            @update-input="updateTime">
+          </FormInput>        
+      </EditField>
+    </section>
+
     <br/>
-    <EditField 
-      :field="todo.status"
-      :saveUpdatedField="saveUpdatedStatus">       
-        <FormRadio
-          label="Status"
-          v-bind:items="[
-            {
-              text: 'Completed',
-              value: 'complete'
-            },
-            {
-              text: 'Not complete',
-              value: 'not-complete'
-            }]"
-          name="status"
-          @update-radio="updateStatus"
-        ></FormRadio> 
-    </EditField>
+    <section>
+      <EditField
+        text="Status"
+        :field="todo.status"
+        :saveUpdatedField="saveUpdatedStatus">       
+          <FormRadio
+            label="Status"
+            v-bind:items="[
+              {
+                text: 'Completed',
+                value: 'complete'
+              },
+              {
+                text: 'Not complete',
+                value: 'not-complete'
+              }]"
+            name="status"
+            @update-radio="updateStatus"
+          ></FormRadio> 
+      </EditField>
+    </section>
+
     <p class="text-sm font-medium text-gray-900">ID: {{todo.id}}</p>
     <br/>
   </main>
