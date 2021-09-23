@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="text-7xl">Add todo item</h1>
+    <h1 class="text-3xl py-4 font-extrabold">Add todo item</h1>
     <Form
       @update-description="updateDescription"
       @update-group="updateGroup"

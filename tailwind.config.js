@@ -12,10 +12,22 @@ module.exports = {
       blue: colors.sky,
       red: colors.rose,
       pink: colors.fuchsia,
+      "rose": {
+        "50": "#e9a0ab",
+        "100": "#df96a1",
+        "200": "#d58c97",
+        "300": "#cb828d",
+        "400": "#c17883",
+        "500": "#b76e79",
+        "600": "#ad646f",
+        "700": "#a35a65",
+        "800": "#99505b",
+        "900": "#8f4651"
+      }
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      sans: ['sans-serif'],
+      serif: ['serif'],
     },
     extend: {
       spacing: {
@@ -27,8 +39,10 @@ module.exports = {
       }
     }
   },
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
   plugins: [
-    require('@tailwindcss/forms'),
-    // ...
+    require('@tailwindcss/forms')
   ],
 }
