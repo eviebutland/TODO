@@ -1,5 +1,5 @@
 <template>
-  <main class="border-solid border-2 shadow  mx-20 rounded-xl flex">
+  <main class="border-solid border-2 shadow  mx-20 rounded-xl flex" data-test-id="home-page-main">
     <div class="p-5 bg-gray-100">
       <FormInput placeholder="search" type="text" label="search" name="search" class="rounded-xl" hideLabel/>
       <div class="flex justify-between mt-5 mb-2">
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="flex flex-col p-10 shadow w-full">
-      <h1 class="text-7xl text-rose-300">Today</h1>
+      <h1 class="text-7xl text-rose-300" data-test-id="home-page-title">Today</h1>
       <NuxtLink to="/addToDo">Add a todo</NuxtLink>
     </div>
   </main>

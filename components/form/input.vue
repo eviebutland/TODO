@@ -1,7 +1,12 @@
 <template>
   <fieldset>
     <label :for="name" :class="hideLabel && 'hidden'">{{label}}</label>
-    <input type="text" :name="name" :id="name" :placeholder="placeholder" v-model="description" @input="$emit('update-input', description)"> 
+    <input type="text" 
+      :name="name" :id="name" 
+      :placeholder="placeholder" 
+      v-model="description" 
+      @input="$emit('update-input', description)" 
+      :data-test-id="dataTestId"> 
   </fieldset>
 </template>
 
@@ -12,7 +17,8 @@ export default {
     label: String,
     name: String,
     placeholder: String,
-    hideLabel: Boolean
+    hideLabel: Boolean,
+    dataTestId: String
   },
   data(){
     return {

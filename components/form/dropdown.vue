@@ -1,7 +1,7 @@
 <template>
   <fieldset>
     <label :for="name">{{label}}</label>
-    <select :name="name" :id="name" v-model="selectedItem" @change="$emit('update-dropdown-selection', selectedItem)">
+    <select :name="name" :id="name" v-model="selectedItem" @change="$emit('update-dropdown-selection', selectedItem)" :data-test-id="dataTestId">
       <option :value="item" v-for="item in items" v-bind:key="item">{{item}}</option>
     </select>
   </fieldset>
@@ -14,7 +14,8 @@ export default {
   props: {
     label: String,
     name: String,
-    items: Array
+    items: Array,
+    dataTestId: String
   },
   data(){
     return {

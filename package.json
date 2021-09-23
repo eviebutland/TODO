@@ -7,7 +7,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "jest"
+    "test": "jest",
+    "e2e:desktop": "npx cypress open"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -17,6 +18,7 @@
     "@nuxtjs/fontawesome": "^1.1.2",
     "@tailwindcss/forms": "^0.3.3",
     "core-js": "^3.15.1",
+    "cypress": "^8.4.1",
     "nuxt": "^2.15.7",
     "tailwindcss-typography": "^3.1.0"
   },

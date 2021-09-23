@@ -4,8 +4,10 @@
       <EditField 
         text="Description"
         :field="todo.description"
-        :saveUpdatedField="saveUpdatedDescription">
+        :saveUpdatedField="saveUpdatedDescription"
+        dataTestId="edit-description">
           <FormInput 
+            dataTestId="edit-description-field"
             label="Description of task"
             name="item"
             placeholder="please enter a description"
@@ -16,6 +18,7 @@
     <br/>
     <section>
       <EditField 
+        dataTestId="edit-group"
         text="Group"
         :field="todo.group"
         :saveUpdatedField="saveUpdatedGroup">
@@ -31,6 +34,7 @@
     <br/>
     <section>
       <EditField 
+        dataTestId="edit-category"
         text="Category"
         :field="todo.category"
         :saveUpdatedField="saveUpdatedCategory">
@@ -46,6 +50,7 @@
     <br/>
     <section>
       <EditField
+        dataTestId="edit-estimated-time"
         text="Estimated Time"
         :field="todo.time"
         :saveUpdatedField="saveUpdatedTime">
@@ -61,6 +66,7 @@
     <br/>
     <section>
       <EditField
+        dataTestId="edit-status"
         text="Status"
         :field="todo.status"
         :saveUpdatedField="saveUpdatedStatus">       

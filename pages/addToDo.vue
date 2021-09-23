@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="text-3xl py-4 font-extrabold">Add todo item</h1>
+    <h1 class="text-3xl py-4 font-extrabold" data-test-id="add-todo-title">Add todo item</h1>
     <Form
       @update-description="updateDescription"
       @update-group="updateGroup"
@@ -14,9 +14,9 @@
     <button @click="getAllTodos" class="rounded bg-blue-500 md:bg-green-500">Return all todos</button>
 
     <!-- add styles to me -->
-    <ul v-if="todos.length > 0" class="divide-y divide-gray-200 rounded-full">
+    <ul v-if="todos.length > 0" class="divide-y divide-gray-200 rounded-full" data-test-id="all-todos">
       <li v-for="todo in todos" :key="todo.description" class="ml-3">
-        <NuxtLink :to="'/todo/'+ todo.id">
+        <NuxtLink :to="'/todo/'+ todo.id" data-test-id="new-todo-link">
           <h3 class="text-xl">{{todo.description}}</h3>
           <!-- loop through these properties -->
           <p class="text-sm font-medium text-gray-900">Group: {{todo.group}}</p>
