@@ -36,19 +36,7 @@
         :saveUpdatedField="saveUpdatedCategory">
           <FormRadio
             label="Please select a category"
-            v-bind:items="[
-              {
-                text: 'Quick task',
-                value: 'quick-task'
-              },
-              {
-                text: 'Task',
-                value: 'task'
-              },
-              {
-                text: 'Project',
-                value: 'project'
-              }]"
+            v-bind:items="categories"
             name="category"
             @update-radio="updateCategory"
           ></FormRadio>
@@ -101,11 +89,12 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+import categories from '../../utils/category'
 
 export default {
   name: 'unique-todo',
   mounted(){
-    console.log(this.numberOfTodos) // works 
+    this.categories = categories()
     this.todo = this.getSingleItem(this.$route.params.id)
   },
   computed: {
@@ -134,6 +123,7 @@ export default {
       this.addNewTodoItem(item)
     },
     saveUpdatedGroup(e){
+      // need to tidy these up
       e.preventDefault()
       const item = {
         id: this.todo.id,

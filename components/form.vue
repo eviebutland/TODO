@@ -15,19 +15,7 @@
       </FormDropdown>
       <FormRadio
         label="Please select a category"
-        v-bind:items="[
-          {
-            text: 'Quick task',
-            value: 'quick-task'
-          },
-          {
-            text: 'Task',
-            value: 'task'
-          },
-          {
-            text: 'Project',
-            value: 'project'
-          }]"
+        v-bind:items="categories"
         name="category"
         @update-radio="$emit('update-category', $event)"
       ></FormRadio>
@@ -56,13 +44,18 @@
 </template>
 
 <script>
+import categories from '../utils/category'
 
 export default {
   name: 'todo-form',
   data(){
     return {
-      description: ''
+      description: '',
+      categories: []
     }
+  },
+  mounted(){
+    this.categories = categories()
   }
 }
 </script>

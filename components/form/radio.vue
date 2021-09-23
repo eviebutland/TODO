@@ -26,6 +26,9 @@ export default {
     return {
       selectedItem: ''
     }
+  },
+  mounted() {
+    console.log(this.items)
   }
 }
 </script>
