@@ -1,10 +1,16 @@
 export const state = () => ({
-  todos: []
+  todos: [],
+  description: '' // this should eventually make a new item in todo list, and be cleared
 })
 
 export const mutations = {
   addNewTodoItem(state, value){
     state.todos.push(value)
+  },
+  updateDescription(state, value){
+    console.log('value', value)
+    state.description = value
+    console.log('state', state)
   }
 }
 

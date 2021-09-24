@@ -1,8 +1,8 @@
 <template>
   <fieldset>
-    <label :for="name">{{label}}</label>
+    <label :for="name" :class="hideLabel && 'hidden'">{{label}}</label>
     <select :name="name" :id="name" v-model="selectedItem" @change="$emit('update-dropdown-selection', selectedItem)" :data-test-id="dataTestId">
-      <option :value="item" v-for="item in items" v-bind:key="item">{{item}}</option>
+      <option :value="item.value" v-for="item in items" v-bind:key="item.value">{{item.text}}</option>
     </select>
   </fieldset>
 </template>
@@ -15,7 +15,8 @@ export default {
     label: String,
     name: String,
     items: Array,
-    dataTestId: String
+    dataTestId: String,
+    hideLabel: Boolean
   },
   data(){
     return {

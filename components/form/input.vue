@@ -6,7 +6,8 @@
       :placeholder="placeholder" 
       v-model="description" 
       @input="$emit('update-input', description)" 
-      :data-test-id="dataTestId"> 
+      :data-test-id="dataTestId"
+      class="border-none "> 
   </fieldset>
 </template>
 
