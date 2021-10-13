@@ -60,19 +60,19 @@ export default {
     ...mapMutations([
       'addNewTodoItem'
     ]),
-    updateDescription(value){
+    setDescription(value){
       this.description = value
     },
-    updateTime(value){
+    setTime(value){
       this.time = value
     },
-    updateGroup(value){
+    setGroup(value){
       this.group = value
     },
-    updateCategory(value){
+    setCategory(value){
       this.category = value
     },
-    updateStatus(value){
+    setStatus(value){
       this.status = value
     },
     storeInState(e){
