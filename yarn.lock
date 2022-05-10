@@ -1467,9 +1467,9 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@tailwindcss/forms@^0.3.4":
-  version "0.3.4"
-  resolved "https://registry.npmjs.org/@tailwindcss/forms/-/forms-0.3.4.tgz"
+"@tailwindcss/forms@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.5.1.tgz#7fe86b9b67e6d91cb902e2d3f4ebe561cc057a13"
   dependencies:
     mini-svg-data-uri "^1.2.3"
 
