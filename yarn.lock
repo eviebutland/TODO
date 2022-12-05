@@ -1711,13 +1711,9 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/test-utils@^1.2.1":
-  version "1.2.2"
-  resolved "https://registry.npmjs.org/@vue/test-utils/-/test-utils-1.2.2.tgz"
-  dependencies:
-    dom-event-types "^1.0.0"
-    lodash "^4.17.15"
-    pretty "^2.0.0"
+"@vue/test-utils@^2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.2.5.tgz#f3a7972de49ad17d186b19f6bb0086f57b1d171b"
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -2984,14 +2980,6 @@ concat-stream@^1.5.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-condense-newlines@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.npmjs.org/condense-newlines/-/condense-newlines-0.2.1.tgz"
-  dependencies:
-    extend-shallow "^2.0.1"
-    is-whitespace "^0.3.0"
-    kind-of "^3.0.2"
-
 config-chain@^1.1.12:
   version "1.1.13"
   resolved "https://registry.npmjs.org/config-chain/-/config-chain-1.1.13.tgz"
@@ -3644,10 +3632,6 @@ dom-converter@^0.2.0:
   resolved "https://registry.npmjs.org/dom-converter/-/dom-converter-0.2.0.tgz"
   dependencies:
     utila "~0.4"
-
-dom-event-types@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/dom-event-types/-/dom-event-types-1.0.0.tgz"
 
 dom-serializer@0:
   version "0.2.2"
@@ -5150,10 +5134,6 @@ is-url-superb@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/is-url-superb/-/is-url-superb-4.0.0.tgz"
 
-is-whitespace@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npmjs.org/is-whitespace/-/is-whitespace-0.3.0.tgz"
-
 is-windows@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/is-windows/-/is-windows-1.0.2.tgz"
@@ -5620,7 +5600,7 @@ jiti@^1.9.2:
   version "1.11.0"
   resolved "https://registry.npmjs.org/jiti/-/jiti-1.11.0.tgz"
 
-js-beautify@^1.6.12, js-beautify@^1.6.14:
+js-beautify@^1.6.14:
   version "1.14.0"
   resolved "https://registry.npmjs.org/js-beautify/-/js-beautify-1.14.0.tgz"
   dependencies:
@@ -7627,14 +7607,6 @@ pretty-hrtime@^1.0.3:
 pretty-time@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/pretty-time/-/pretty-time-1.1.0.tgz"
-
-pretty@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/pretty/-/pretty-2.0.0.tgz"
-  dependencies:
-    condense-newlines "^0.2.1"
-    extend-shallow "^2.0.1"
-    js-beautify "^1.6.12"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
